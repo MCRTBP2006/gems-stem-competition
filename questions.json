@@ -56,13 +56,13 @@
   },
   {
     "id": "q6",
-    "question": "What type of foods do you consume most frequently?",
+    "question": "What type of health do you consume most frequently?",
     "options": [
-      { "text": "Fried foods, fast food", "scores": { "nutritional": -10, "mental": -5 } },
-      { "text": "Mostly saturated fat", "scores": { "nutritional": -2, "mental": 0 } },
-      { "text": "Healthy fats (olive oil,fish)", "scores": { "nutritional": 10, "mental": 5 } },
-      { "text": "Low fat overall", "scores": { "nutritional": -5, "mental": -2 } },
-      { "text": "avoid fats", "scores": { "nutritional": -10, "mental": -5 } }
+      { "text": "Health potions", "scores": { "nutritional": -10, "mental": -5 } },
+      { "text": "Health injections", "scores": { "nutritional": -2, "mental": 0 } },
+      { "text": "Health powder", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "Low Health usage", "scores": { "nutritional": -5, "mental": -2 } },
+      { "text": "avoid Health", "scores": { "nutritional": -10, "mental": -5 } }
     ]
   },
   {
