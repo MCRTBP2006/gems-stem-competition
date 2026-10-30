@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Health Analysis Results</title>
+    <style>
+        body { font-family: 'Roboto', sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+        .header-results { text-align: center; margin-bottom: 20px; }
+        #resultContainer { margin-top: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px; white-space: pre-wrap; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="header-results">
+        <h1>Health Analysis</h1>
+    </div>
+    
+    <div id="resultContainer">
+        Analyzing your onboarding profile and magical vitals... Please wait.
+    </div>
+
+    <!-- Import Google GenAI SDK -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.run/@google/genai"
+        }
+      }
+    </script>
+
+    <script type="module">
+        import { GoogleGenAI } from "@google/genai";
+
+        // Initialize Gemini (Replace "YOUR_API_KEY" with your actual API key)
+        const ai = new GoogleGenAI({ apiKey: "AQ.Ab8RN6KN25_1RroGkcbLY5OTx7_2Qz3n1cfvoN7z3Wf4EHg2fA" });
+
+        async function generateReport() {
+            const resultDiv = document.getElementById('resultContainer');
+
+            // 1. Retrieve both saved datasets from localStorage
+            const onboardingSaved = localStorage.getItem('userOnboardingData');
+            const quizSaved = localStorage.getItem('healthQuizResponses');
+            
+            if (!onboardingSaved || !quizSaved) {
+                resultDiv.innerText = "Error: Missing data. Please complete the onboarding form and health questionnaire first!";
+                return;
+            }
+
+            const onboarding = JSON.parse(onboardingSaved);
+            const quizResponses = JSON.parse(quizSaved);
+
+            // 2. Format onboarding details into the prompt
+            let summary = `=== USER ONBOARDING PROFILE ===\n`;
+            summary += `- Name: ${onboarding.name}\n`;
+            summary += `- Date of Birth: ${onboarding.dob}\n`;
+            summary += `- Gender: ${onboarding.gender}\n`;
+            summary += `- Height: ${onboarding.height} cm\n`;
+            summary += `- Weight: ${onboarding.weight} kg\n`;
+            summary += `- Allergies: ${onboarding.allergies}\n`;
+            summary += `- Additional Notes: ${onboarding.other}\n\n`;
+
+            // 3. Format questionnaire answers and calculate total scores
+            summary += `=== HEALTH & MAGICAL VITAL RESPONSES ===\n`;
+            let totalNutritional = 0;
+            let totalMental = 0;
+
+            quizResponses.forEach((item, idx) => {
+                summary += `${idx + 1}. Q: ${item.question} | Answer: ${item.answer}\n`;
+                if (item.scores) {
+                    totalNutritional += item.scores.nutritional || 0;
+                    totalMental += item.scores.mental || 0;
+                }
+            });
+
+            summary += `\nCalculated Stats -> Nutritional Score: ${totalNutritional}, Mental/Mana Score: ${totalMental}\n\n`;
+            summary += `Based on all of the above, provide a fun, engaging, and personalized health evaluation and advice report tailored specifically to this user.`;
+
+            try {
+                // 4. Send the combined summary straight to Gemini
+                const response = await ai.models.generateContent({
+                    model: 'gemini-3.8-flash',
+                    contents: summary,
+                });
+
+                resultDiv.innerText = response.text;
+
+                // 5. Clean up localStorage once processed
+                localStorage.removeItem('userOnboardingData');
+                localStorage.removeItem('healthQuizResponses');
+
+            } catch (error) {
+                resultDiv.innerText = "Error communicating with Gemini: " + error.message;
+            }
+        }
+
+        generateReport();
+    </script>
+</body>
+</html>
