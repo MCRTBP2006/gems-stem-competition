@@ -1,0 +1,156 @@
+[
+  {
+    "id": "q1",
+    "question": "How many liters of mana potions do you drink a day?",
+    "options": [
+      { "text": "Less than 1L", "scores": { "nutritional": -10, "mental": -5 } },
+      { "text": "1 - 1.5L", "scores": { "nutritional": -5, "mental": -2 } },
+      { "text": "1.5 - 2.5L", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "2.5 - 3.5L", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "3.5L+", "scores": { "nutritional": 5, "mental": 0 } }
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "How often do you eat protein sources (dragon, chimera, hydra)?",
+    "options": [
+      { "text": "Less than 2 times a week", "scores": { "nutritional": -10, "mental": -5 } },
+      { "text": "3 - 4 times a week", "scores": { "nutritional": -5, "mental": 0 } },
+      { "text": "Once a day", "scores": { "nutritional": 5, "mental": 2 } },
+      { "text": "2 - 3 times a day", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "Every meal in large portions", "scores": { "nutritional": 5, "mental": 0 } }
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "How many servings of moss do you eat per day?",
+    "options": [
+      { "text": "0", "scores": { "nutritional": -10, "mental": -5 } },
+      { "text": "1", "scores": { "nutritional": -5, "mental": 0 } },
+      { "text": "2-3", "scores": { "nutritional": 5, "mental": 2 } },
+      { "text": "4-5", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "More than 5", "scores": { "nutritional": 10, "mental": 5 } }
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "What is the primary source of ectoplasm?",
+    "options": [
+      { "text": "Mostly enchanted (wonder bread, haunted pastries)", "scores": { "nutritional": -10, "mental": -5 } },
+      { "text": "Mix of enchanted and harvested grains", "scores": { "nutritional": 0, "mental": 0 } },
+      { "text": "Mostly sould-based grains (souls, ectoplasm, slime)", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "Low intake ", "scores": { "nutritional": 0, "mental": -2 } },
+      { "text": "zero carbohydrates", "scores": { "nutritional": -5, "mental": -5 } }
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "How often do you consume mana enhancers?",
+    "options": [
+      { "text": "Multiple times daily", "scores": { "nutritional": -10, "mental": -10 } },
+      { "text": "Once daily", "scores": { "nutritional": -5, "mental": -5 } },
+      { "text": "2-3 times a week", "scores": { "nutritional": 0, "mental": 0 } },
+      { "text": "Rarely", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "Never", "scores": { "nutritional": 10, "mental": 5 } }
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "What type of foods do you consume most frequently?",
+    "options": [
+      { "text": "Fried foods, fast food", "scores": { "nutritional": -10, "mental": -5 } },
+      { "text": "Mostly saturated fat", "scores": { "nutritional": -2, "mental": 0 } },
+      { "text": "Healthy fats (olive oil,fish)", "scores": { "nutritional": 10, "mental": 5 } },
+      { "text": "Low fat overall", "scores": { "nutritional": -5, "mental": -2 } },
+      { "text": "avoid fats", "scores": { "nutritional": -10, "mental": -5 } }
+    ]
+  },
+  {
+    "id": "q7",
+    "question": "How often do you engage in magical exercise?",
+    "options": [
+      { "text": "Less than once a week", "scores": { "nutritional": -5, "mental": -10 } },
+      { "text": "1-2 times a week", "scores": { "nutritional": 0, "mental": 0 } },
+      { "text": "3-4 times a week", "scores": { "nutritional": 5, "mental": 10 } },
+      { "text": "5+ times a week", "scores": { "nutritional": 10, "mental": 10 } },
+      { "text": "Daily", "scores": { "nutritional": 5, "mental": 2 } }
+    ]
+  },
+  {
+    "id": "q8",
+    "question": "On average, how many hours of mana resoration do you get?",
+    "options": [
+      { "text": "Less than 5 hours", "scores": { "nutritional": -5, "mental": -10 } },
+      { "text": "5-6 hours", "scores": { "nutritional": -2, "mental": -5 } },
+      { "text": "7-8 hours", "scores": { "nutritional": 5, "mental": 10 } },
+      { "text": "8-9 hours", "scores": { "nutritional": 5, "mental": 10 } },
+      { "text": "More than 10 hours", "scores": { "nutritional": 0, "mental": -2 } }
+    ]
+  },
+  {
+    "id": "q9",
+    "question": "How refreshed do you feel upon waking up?",
+    "options": [
+      { "text": "exhausted", "scores": { "nutritional": -2, "mental": -10 } },
+      { "text": "Groggy", "scores": { "nutritional": 0, "mental": -5 } },
+      { "text": "Fairly rested", "scores": { "nutritional": 2, "mental": 5 } },
+      { "text": "Fully refreshed", "scores": { "nutritional": 5, "mental": 10 } },
+      { "text": "Inconsistent", "scores": { "nutritional": 0, "mental": 0 } }
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "How often do you feel overwhelmed with daily stress or mana cramps?",
+    "options": [
+      { "text": "Daily", "scores": { "nutritional": -5, "mental": -10 } },
+      { "text": "3-4 times a week", "scores": { "nutritional": -2, "mental": -5 } },
+      { "text": "1-2 times a week", "scores": { "nutritional": 0, "mental": 0 } },
+      { "text": "Rarely", "scores": { "nutritional": 2, "mental": 5 } },
+      { "text": "Never", "scores": { "nutritional": 5, "mental": 10 } }
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "How often do you experience visual or auditory hallucinations?",
+    "options": [
+      { "text": "Daily or multiple times a day", "scores": { "nutritional": 0, "mental": -20 } },
+      { "text": "Weekly", "scores": { "nutritional": 0, "mental": -15 } },
+      { "text": "Rarely", "scores": { "nutritional": 0, "mental": -5 } },
+      { "text": "Only when falling asleep or waking up", "scores": { "nutritional": 0, "mental": 0 } },
+      { "text": "Never", "scores": { "nutritional": 0, "mental": 10 } }
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "If experienced, what type of perceptions occur most frequently?",
+    "options": [
+      { "text": "Voices or sounds", "scores": { "nutritional": 0, "mental": -10 } },
+      { "text": "Uncontrolled mana usage", "scores": { "nutritional": 0, "mental": -5 } },
+      { "text": "Visual shapes or figures", "scores": { "nutritional": 0, "mental": -10 } },
+      { "text": "physical sensations", "scores": { "nutritional": 0, "mental": -5 } },
+      { "text": "Never experienced", "scores": { "nutritional": 0, "mental": 0 } }
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "Do these sensory experiences cause significant fear or panic?",
+    "options": [
+      { "text": "Extreme distress", "scores": { "nutritional": -5, "mental": -15 } },
+      { "text": "Moderate distress", "scores": { "nutritional": 0, "mental": -10 } },
+      { "text": "Mild discomfort", "scores": { "nutritional": 0, "mental": -5 } },
+      { "text": "No distres", "scores": { "nutritional": 0, "mental": 0 } },
+      { "text": "Never experienced", "scores": { "nutritional": 0, "mental": 0 } }
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "How often do you spend at least 15-20 minutes outdoors in moonlight?",
+    "options": [
+      { "text": "Less than once a week", "scores": { "nutritional": -2, "mental": -10 } },
+      { "text": "1-2 days a week", "scores": { "nutritional": 0, "mental": -5 } },
+      { "text": "3-4 days a week", "scores": { "nutritional": 2, "mental": 2 } },
+      { "text": "5-6 days a week", "scores": { "nutritional": 5, "mental": 5 } },
+      { "text": "Daily", "scores": { "nutritional": 5, "mental": 10 } }
+    ]
+  }
+]
