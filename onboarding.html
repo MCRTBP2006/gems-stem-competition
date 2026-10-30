@@ -2,43 +2,44 @@
 <html>
 
 <head lang="en">
-    <title>OnBoarding</title>
+    <title>Onboarding</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="main">
-        <h1>Please complete the onboarding</h1>
+    <div class="header-onboarding"><h1>Please complete the onboarding</h1></div>
+    <div class="main-onboarding">
         <form>
             <label for="fname">Name</label><br>
-            <input type="text" id="name" name="name" required value=""><br>
+            <input type="text" id="name" name="name"  value=""><br>
             <label for="dob">Date of Birth</label><br>
-            <input type="date" id="dob" name="dob" required value=""><br>
+            <input type="date" id="dob" name="dob"  value=""><br>
             <label for="gender">Gender</label><br>
-            <select id="gender" name="Gender" required>
+            <select id="gender" name="Gender" >
                 <option value="" disabled selected hidden></option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
             </select>
             <br>
-            <label for="height">Height</label><br>
-            <input type="number" required step="any" min="1" id="height" name="height" value=""><br>
-            <label for="weight">Weight</label><br>
-            <input type="number" required step="any" min="1" id="weight" name="weight" value=""><br>
+            <label for="height">Height (cm)</label><br>
+            <input type="number"  step="any" min="1" id="height" name="height" value=""><br>
+            <label for="weight">Weight (kg)</label><br>
+            <input type="number"  step="any" min="1" id="weight" name="weight" value=""><br>
             <label for="PNum">Phone Number</label><br>
-            <input type="text" required id="PNum" name="height" value=""><br>
+            <input type="text"  id="PNum" name="height" value=""><br>
             <label for="email">Email Address</label><br>
-            <input type="text" required id="email" name="email" value=""><br>
+            <input type="text"  id="email" name="email" value=""><br>
             <label for="allergies">Any Allergies</label><br>
-            <input type="text" required id="allergies" name="allergies" value=""><br>
+            <input type="text"  id="allergies" name="allergies" value=""><br>
             <label for="other">Anything else you would like to mention.</label><br>
-            <input type="text" required id="other" name="other" value=""><br>
+            <input type="text"  id="other" name="other" value=""><br>
 
 
             <br>
-            <input type="submit" value="Submit">
+            <!-- <input type="submit" value="Submit"> -->
+            <a href="form.html" class="onboarding-button">Submit</a>
         </form>
     </div>
 </body>
