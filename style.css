@@ -7,6 +7,9 @@ body {
     color: #FFFFFF;
 }
 
+h1 {
+    margin: 50px;
+}
 
 .header {
     background-color: #1b1d24;
@@ -15,9 +18,23 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    width: 100%;
+    width: 93.5vw;
     padding: 3rem;
+    box-shadow: 0 5px 20px #1b1d24;
+    margin: 0;
 }
+.header-onboarding {
+    background-color: #1b1d24;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100vw;
+    padding: 1rem;
+    box-shadow: 0 5px 20px #1b1d24;
+}
+
 
 .main {
     text-align: center;
@@ -25,6 +42,12 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.main-onboarding {
+    text-align: center;
+    margin-top: 13rem;
+    margin-bottom: 13rem;
 }
 
 .form {
@@ -40,6 +63,44 @@ body {
     padding: 1rem;
 }
 
+.button {
+    border-radius: 10px;
+    color: white;
+    background-color: #ffa13d;
+    border: none;
+    margin: 4px 6px;
+    padding: 15px 32px;    
+    font-size: 20pt;
+    box-shadow: 0 0 20px #1b1d24;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #f5a54f;
+    transform: translateY(-3px);
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 5px 20px #1b1d24;
+}
+
+.onboarding-button {
+    border-radius: 10px;
+    color: white;
+    background-color: #ffa13d;
+    border: none;
+    margin: 4px 6px;
+    padding: 10px 27px;    
+    font-size: 12pt;
+    box-shadow: 0 0 20px #1b1d24;
+    text-decoration: none;
+}
+
+.onboarding-button:hover {
+    background-color: #f5a54f;
+    transform: translateY(-3px);
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 5px 20px #1b1d24;
+}
+
 .fbutton {
     border-radius: 10px;
     color: white;
@@ -48,12 +109,24 @@ body {
     margin: 4px 6px;
     padding: 15px 32px;    
     font-size: 14pt;
-    box-shadow: 0 0 10px #1b1d24;
+    box-shadow: 0 0 20px #1b1d24;
 }
 
 .fbutton:hover {
     background-color: #f5a54f;
     transform: translateY(-3px);
     transition: 0.15s ease-in-out;
-    box-shadow: 0 3px 10px #1b1d24;
+    box-shadow: 0 5px 20px #1b1d24;
+}
+
+input, select {
+    background-color: #1b1d24;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    height: 30px;
+    width: 300px;
+    text-align: center;
+    font-size: 14pt;
 }
